@@ -103,9 +103,9 @@ main() {
     dir_repo="/home/$USER/Downloads/TFM_repository"
     dir_venv="/home/$USER/Downloads/TFM_venv"
     
-    #create_repo_dir $dir_repo && \
-    #clone_repository $dir_repo && \
-    #install_python && \    
+    create_repo_dir $dir_repo && \
+    clone_repository $dir_repo && \
+    install_python && \    
     sudo ln -sf /usr/bin/python3.10 /usr/bin/python && \
     python -V && \ # shows Python 3.10  
     echo "Python 3.10 installed and set as default" && \
