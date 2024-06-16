@@ -19,13 +19,13 @@
             <tr align="center">
                 <td><strong>Trips</strong></td>
                 <td><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/juanMarinero/BSS_NYC_iplots_and_classification/master/BSS_trips.html">🔗</a></td>
-                <td><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/juanMarinero/BSS_NYC_iplots_and_classification/master/BSS_trips.ipynb">🔗</a></td>
+                <td><a href="https://github.com/juanMarinero/BSS_NYC_iplots_and_classification/blob/main/BSS_trips.ipynb">🔗</a></td>
                 <td><a href="https://ride.citibikenyc.com/system-data">🔗</a></td>
             </tr>
             <tr align="center">
                 <td><strong>Stations</strong></td>
                 <td><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/juanMarinero/BSS_NYC_iplots_and_classification/master/BSS_stations.html">🔗</a></td>
-                <td><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/juanMarinero/BSS_NYC_iplots_and_classification/master/BSS_stations.ipynb">🔗</a></td>
+                <td><a href="https://github.com/juanMarinero/BSS_NYC_iplots_and_classification/blob/main/BSS_stations.ipynb">🔗</a></td>
                 <td><a href="https://www.kaggle.com/datasets/rosenthal/citi-bike-stations">🔗</a></td>
             </tr>
         </tbody>
