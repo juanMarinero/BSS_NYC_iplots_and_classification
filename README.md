@@ -11,7 +11,7 @@ Brief study of the public bicycle rental service <a href="https://citibikenyc.co
 <table>
 <thead>
     <tr>
-        <th><strong></strong></th>
+        <th>🚲</th>
         <th><strong>HTML</strong></th>
         <th><strong>ipynb</strong></th>
         <th><strong>Original<br>Database</strong></th>
