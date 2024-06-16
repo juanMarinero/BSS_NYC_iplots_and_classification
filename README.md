@@ -12,7 +12,7 @@ Brief study of the public bicycle rental service <a href="https://citibikenyc.co
 <thead>
     <tr>
         <th><font size="5em">🚴</font></th>
-        <th><font size="5em">HTML</font></th>
+        <th><strong>HTML</strong></th>
         <th><strong>ipynb</strong></th>
         <th><strong>Original<br>Database</strong></th>
     </tr>
