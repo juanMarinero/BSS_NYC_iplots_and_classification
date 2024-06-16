@@ -22,6 +22,7 @@ clone_repository() {
     cp -r $git_repo/* $dir_repo && \
     cp -r $git_repo/.git $dir_repo && \
     rm -rf $git_repo && \
+    unzip -d $dir_repo/databases/ $dir_repo/databases/pickle.zip && \
     echo "Repository cloned and moved to: $dir_repo"
     echo ""
 }
@@ -35,9 +36,7 @@ install_python() {
     sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10  && \
     sudo update-alternatives --config python3  && \
     sudo mv /usr/bin/python /usr/bin/python_backup  && \
-    sudo ln -sf /usr/bin/python3.10 /usr/bin/python  && \
-    python -V # shows Python 3.10  && \
-    echo "Python 3.10 installed and set as default"
+    echo "Python 3.10 installed"
     echo ""
 }
 
@@ -58,8 +57,8 @@ create_virtualenv() {
 
 # Function to install dependencies from requirements.txt and other needed packages
 install_dependencies() {
-    local dir_venv=$1
-    local dir_repo=$2
+    local dir_repo=$1
+    local dir_venv=$2
     source $dir_venv/bin/activate  && \
     pip install -r $dir_repo/requirements.txt  && \
     pip install lxml_html_clean lxml[html_clean]  && \
@@ -76,8 +75,11 @@ install_graphviz_node() {
 
 # Function to install holoviews
 install_holoviews() {
+    local dir_repo=$1
+    local dir_venv=$2
     git clone https://github.com/holoviz/holoviews.git && \
     cd holoviews || exit
+    source $dir_venv/bin/activate  && \
     pip install -e .  && \
     echo "Holoviews installed"
     echo ""
@@ -86,7 +88,9 @@ install_holoviews() {
 # Function to run the Jupyter notebook
 run_jupyter() {
     local dir_repo=$1
+    local dir_venv=$2
     cd $dir_repo && \
+    source $dir_venv/bin/activate  && \
     jupyter notebook
     echo "Jupyter notebook started in: $dir_repo"
     echo ""
@@ -99,15 +103,18 @@ main() {
     dir_repo="/home/$USER/Downloads/TFM_repository"
     dir_venv="/home/$USER/Downloads/TFM_venv"
     
-    create_repo_dir $dir_repo && \
-    clone_repository $dir_repo && \
-    install_python && \
+    #create_repo_dir $dir_repo && \
+    #clone_repository $dir_repo && \
+    #install_python && \    
+    sudo ln -sf /usr/bin/python3.10 /usr/bin/python && \
+    python -V && \ # shows Python 3.10  
+    echo "Python 3.10 installed and set as default" && \
     install_python_venv && \
     create_virtualenv $dir_venv && \
     install_dependencies $dir_repo $dir_venv && \
     install_graphviz_node && \
-    install_holoviews && \
-    run_jupyter $dir_repo
+    install_holoviews $dir_venv $dir_venv && \
+    run_jupyter $dir_repo $dir_venv
 }
 
 # Run the main function
