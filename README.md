@@ -5,7 +5,7 @@
 
 <p align="left">
 <br><br>
-Brief study of the public bicycle rental service <a href="https://citibikenyc.com/how-it-works">Bicing</a>, New York City.
+Brief study of the public bicycle rental service <a href="https://citibikenyc.com/how-it-works">Citi Bike</a> in New York City.
 </p>
 
 <table>
@@ -33,7 +33,5 @@ Brief study of the public bicycle rental service <a href="https://citibikenyc.co
 </tbody>
 </table>
 
-
-## License
 
 <a href="https://www.gnu.org/licenses/fdl-1.3.en.html">GNU Free Documentation License</a>
